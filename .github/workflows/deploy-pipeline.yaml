@@ -44,16 +44,6 @@ jobs:
         with:
           name: zipped-bundle
           path: ${{ github.sha }}.zip
-
-  release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
